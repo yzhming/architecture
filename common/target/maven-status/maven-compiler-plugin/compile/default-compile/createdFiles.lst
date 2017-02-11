@@ -1,5 +1,3 @@
-com\sishuok\pageutil\PagePlugin.class
 com\sishuok\pageutil\ReflectHelper.class
-com\sishuok\common\Base1.class
-com\sishuok\common\App.class
+com\sishuok\pageutil\PagePlugin.class
 com\sishuok\pageutil\Page.class
