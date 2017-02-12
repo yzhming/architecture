@@ -41,7 +41,7 @@ public class CustomerController {
 		return "customer/update";
 	}
 
-	@RequestMapping(value = "udapte", method = RequestMethod.POST)
+	@RequestMapping(value = "update", method = RequestMethod.POST)
 	public String post(@ModelAttribute("cm") CustomerModel cm) {
 		ics.update(cm);
 		return "customer/success";
@@ -61,19 +61,22 @@ public class CustomerController {
 	}
 
 	@RequestMapping(value = "toList", method = RequestMethod.GET)
-	public String toList(@RequestParam(value = "queryJosnStr", defaultValue = "") String queryJsonStr,
-			@ModelAttribute("page") Page page, Model model) {
+	public String toList(@ModelAttribute("wm") CustomerWebModel wm, Model model) {
 		CustomerQueryModel cqm = null;
-		if (queryJsonStr == null || queryJsonStr.trim().length() == 0) {
+		if (wm.getQueryJsonStr() == null || wm.getQueryJsonStr().trim().length() == 0) {
 			cqm = new CustomerQueryModel();
 		} else {
-			cqm = (CustomerQueryModel) JsonHelper.str2Object(queryJsonStr, CustomerQueryModel.class);
+			cqm = (CustomerQueryModel) JsonHelper.str2Object(wm.getQueryJsonStr(), CustomerQueryModel.class);
 		}
 
-		cqm.getPage().setNowPage(page.getNowPage());
+		cqm.getPage().setNowPage(wm.getNowPage());
+		if (wm.getPageShow() > 0) {
+			cqm.getPage().setPageShow(wm.getPageShow());
+		}
+
 		Page dbPage = ics.getByConditionPage(cqm);
 
-		model.addAttribute("queryJosnStr", queryJsonStr);
+		model.addAttribute("wm", wm);
 		model.addAttribute("page", dbPage);
 
 		return "customer/list";
