@@ -1,8 +1,10 @@
 package com.sishuok.architecture1.common.vo;
 
+import java.io.Serializable;
+
 import com.sishuok.pageutil.Page;
 
-public class BaseModel {
+public class BaseModel implements Serializable{
 
 	private Integer uuid;
 
