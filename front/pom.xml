@@ -21,17 +21,19 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sishuok</groupId>
 			<artifactId>common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sishuok</groupId>
 			<artifactId>customermgr</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
 		</dependency>
 
 		<dependency>
@@ -44,20 +46,46 @@
 			<groupId>com.sishuok</groupId>
 			<artifactId>cartmgr</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
 		</dependency>
 		<dependency>
 			<groupId>com.sishuok</groupId>
 			<artifactId>ordermgr</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sishuok</groupId>
 			<artifactId>storemgr</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<type>jar</type>
+			<classifier>api</classifier>
 		</dependency>
 	</dependencies>
 	<build>
 		<finalName>front</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.14.v20131031</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<stopPort>9999</stopPort>
+					<webAppConfig>
+						<contextPath>/</contextPath>
+					</webAppConfig>
+					<connectors>
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>9080</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

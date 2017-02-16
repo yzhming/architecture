@@ -3,6 +3,7 @@ D:\workspace2017\architecture1\common\src\main\java\com\sishuok\util\format\Date
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\util\json\JsonHelper.java
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\architecture1\common\dao\BaseDAO.java
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\architecture1\common\service\IBaseService.java
+D:\workspace2017\architecture1\common\src\main\java\com\sishuok\architecture1\common\web\BaseWebModel.java
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\architecture1\common\service\BaseService.java
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\pageutil\ReflectHelper.java
 D:\workspace2017\architecture1\common\src\main\java\com\sishuok\architecture1\common\vo\BaseModel.java

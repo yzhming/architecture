@@ -7,13 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form atcion="${pageContext.request.contextPath}/login" method="post">
+	<form action="${pageContext.request.contextPath}/login" method="post">
 		<table width="100%">
-			<tr height="300">
+			<tr height="200">
 				<td colspan="2">&nbsp;</td>
 			</tr>
-			<tr height="300">
-				<td colspan="2">&nbsp;</td>
+			
+			<tr>
+				<td width="350">&nbsp;</td>
 				<td>
 					<table>
 						<tr>

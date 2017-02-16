@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.sishuok.architecture1.customermgr.service.ICustomerService;
 import com.sishuok.architecture1.customermgr.vo.CustomerModel;
 
+
+
 @Controller
 @RequestMapping("/")
 public class LoginController {
@@ -20,7 +22,7 @@ public class LoginController {
 	private ICustomerService ics = null;
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
-	public String toLogin(@RequestParam("customerId")String customerId,@RequestParam("pwd")String pwd){
+	public String toLogin(){
 		
 		return "/login";
 	}

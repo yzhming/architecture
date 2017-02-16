@@ -1,7 +1,8 @@
+com\sishuok\architecture1\customermgr\vo\CustomerQueryModel.class
+com\sishuok\architecture1\customermgr\web\CustomerWebModel.class
+com\sishuok\architecture1\customermgr\service\ICustomerService.class
+com\sishuok\architecture1\customermgr\service\CustomerService.class
+com\sishuok\architecture1\customermgr\web\CustomerController.class
 com\sishuok\architecture1\customermgr\vo\CustomerModel.class
 com\sishuok\architecture1\customermgr\dao\CustomerDAO.class
-com\sishuok\architecture1\customermgr\vo\CustomerQueryModel.class
-com\sishuok\architecture1\customermgr\service\ICustomerService.class
 com\sishuok\architecture1\customermgr\Client.class
-com\sishuok\architecture1\customermgr\web\CustomerController.class
-com\sishuok\architecture1\customermgr\service\CustomerService.class
