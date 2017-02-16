@@ -7,7 +7,6 @@ import com.sishuok.architecture1.common.service.BaseService;
 import com.sishuok.architecture1.customermgr.dao.CustomerDAO;
 import com.sishuok.architecture1.customermgr.vo.CustomerModel;
 import com.sishuok.architecture1.customermgr.vo.CustomerQueryModel;
-import com.sishuok.pageutil.Page;
 
 @Service
 public class CustomerService extends BaseService<CustomerModel, CustomerQueryModel> implements ICustomerService {
@@ -18,6 +17,10 @@ public class CustomerService extends BaseService<CustomerModel, CustomerQueryMod
 	private void setDao(CustomerDAO dao) {
 		this.dao = dao;
 		super.setDAO(dao);
+	}
+
+	public CustomerModel getByCustomerId(String customerId) {
+		return dao.getByCustomerId(customerId);
 	}
 
 }
